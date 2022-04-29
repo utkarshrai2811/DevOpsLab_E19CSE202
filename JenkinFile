@@ -1,0 +1,22 @@
+ipeline{
+  agent any
+  stages{
+    stage("Build"){
+      steps {
+        echo 'running code'
+        sh 'javac UtkarshRai.java'
+        sh 'java UtkarshRai'
+      }
+    }
+   stage("Test"){
+      steps{
+        echo 'testing .....'
+      }
+    }
+   stage("Deployment"){
+      steps{
+        echo 'deploying .....'
+      }
+    }
+  }
+}
